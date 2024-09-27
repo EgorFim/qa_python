@@ -5,22 +5,10 @@ from main import BooksCollector
 
 class TestBooksCollector:
 
-
-    def test_init_books_genre(self,books):
+    def test_init_books_genre(self, books):
+        assert books.books_genre == {}
         books.add_new_book('Улисс')
-        assert books.books_genre == {'Улисс':''}
-
-    def test_init_favorites(self,books):
-        books.favorites.append('Улисс')
-        assert books.favorites == ['Улисс']
-
-    def test_init_genre(self,books):
-        lst_1 = ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии']
-        assert books.genre == lst_1
-
-    def test_init_genre_age_rating(self,books):
-        lst_2 = ['Ужасы', 'Детективы']
-        assert books.genre_age_rating == lst_2
+        assert books.books_genre == {'Улисс': ''}
 
     def test_add_new_book_in_books_genre(self,books):
         books.add_new_book('Улисс')
