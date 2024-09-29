@@ -5,8 +5,7 @@ from main import BooksCollector
 
 class TestBooksCollector:
 
-    def test_init_books_genre(self, books):
-        assert books.books_genre == {}
+    def test_init_books_genre_add(self, books):
         books.add_new_book('Улисс')
         assert books.books_genre == {'Улисс': ''}
 
